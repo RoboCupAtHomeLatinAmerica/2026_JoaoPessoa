@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RoboCup@Home Brazil Open</title>
+  <meta name="description" content="RoboCup@Home Brazil Open — informações de chamada, equipes, pontuação, agenda e tarefas." />
+  <link rel="canonical" href="https://robocupathomelatinamerica.github.io/2025_Vitoria/" />
+
+  <meta property="og:title" content="RoboCup@Home Brazil Open" />
+  <meta property="og:description" content="Chamada, regras, equipes, agenda e tarefas da competição." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Photos/RCB-H.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-white text-slate-800 antialiased dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header -->
+  <header class="border-b border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 font-semibold">
+        <img src="Photos/RCB-H.png" alt="Logo RoboCup@Home Brazil" class="h-8 w-8 rounded" />
+        <span>RoboCup@Home Brazil Open <span class="year"></span></span>
+      </a>
+
+      <!-- Botão hambúrguer -->
+      <button id="menuToggle"
+        class="md:hidden inline-flex items-center gap-2 rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+        Menu
+      </button>
+
+      <!-- Nav responsivo -->
+      <nav id="mainNav"
+        class="hidden md:flex items-center gap-2 md:gap-6 text-sm mt-3 md:mt-0"
+        role="tablist" aria-label="Seções do evento">
+
+        <button role="tab" aria-selected="true" aria-controls="tab-home"     id="tabbtn-home"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-home">Home</button>
+
+        <button role="tab" aria-selected="false" aria-controls="tab-cfp"     id="tabbtn-cfp"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-cfp">CfP</button>
+
+        <button role="tab" aria-selected="false" aria-controls="tab-teams"   id="tabbtn-teams"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-teams">Teams</button>
+
+        <button role="tab" aria-selected="false" aria-controls="tab-score"   id="tabbtn-score"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-score">Score</button>
+
+        <button role="tab" aria-selected="false" aria-controls="tab-schedule" id="tabbtn-schedule"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-schedule">Schedule</button>
+
+        <button role="tab" aria-selected="false" aria-controls="tab-tasks"   id="tabbtn-tasks"
+          class="tabbtn data-[active=true]:bg-blue-600 data-[active=true]:text-white rounded-md border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm"
+          data-target="tab-tasks">Tasks Info</button>
+      </nav>
+
+    </div>
+  </header>
+
+    <!-- Home -->
+    <section id="tab-home" role="tabpanel" aria-labelledby="tabbtn-home" class="tabpanel">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 space-y-12">
+        <!-- HERO -->
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <h1 id="hero-title" class="text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight">
+              RoboCup@Home Brazil Open <span class="year"></span>
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-slate-300">
+              <span class="city"></span> — <span class="date"></span>.
+            </p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              Robotic service and assistance in real environments: HRI, navigation, manipulation and computer vision.
+            </p>
+
+            <div class="lg:col-span-7">
+              <h3 class="text-xl font-semibold mb-2">Organizers</h3>
+              <p>Chair: <span class="chair font-medium"></span></p>
+              <p class="mt-2">Organizing Committee (OC):</p>
+              <ul class="oc list-disc pl-6"></ul>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <a id="ctaOlimpo" href="https://olimpo.robocup.org.br/" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+                Registration
+              </a>
+              <a id="ctaRules" href="https://github.com/RoboCupAtHomeLatinAmerica/RuleBook/blob/2025_draft/build/Rulebook.pdf" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center rounded-md border border-slate-300 dark:border-slate-700 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800">
+                Rules
+              </a>
+              <a id="ctaWhats" href="https://chat.whatsapp.com/BdsJZNjgLPZ7X4wjbB05UF" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center rounded-md border border-slate-300 dark:border-slate-700 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-6">
+            <img src="Photos/RCB-H.png" alt="Foto promocional RoboCup@Home Brazil Open"
+                class="w-full rounded-xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-800" />
+          </div>
+        </div>
+
+        <!-- PHOTOS -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Photos</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <figure class="space-y-2">
+              <img src="Photos/robots.jpg" alt="Robots" class="w-full rounded-md ring-1 ring-slate-200 dark:ring-slate-800">
+              <figcaption class="text-sm text-slate-600 dark:text-slate-400">Robots</figcaption>
+            </figure>
+            <figure class="space-y-2">
+              <img src="Photos/teams.jpg" alt="Teams" class="w-full rounded-md ring-1 ring-slate-200 dark:ring-slate-800">
+              <figcaption class="text-sm text-slate-600 dark:text-slate-400">Teams</figcaption>
+            </figure>
+            <!-- <figure class="space-y-2">
+              <img src="Photos/RCB-H.png" alt="Welcome drinks" class="w-full rounded-md ring-1 ring-slate-200 dark:ring-slate-800">
+              <figcaption class="text-sm text-slate-600 dark:text-slate-400">Welcome drinks</figcaption>
+            </figure>
+            <figure class="space-y-2">
+              <img src="Photos/RCB-H.png" alt="Arena" class="w-full rounded-md ring-1 ring-slate-200 dark:ring-slate-800">
+              <figcaption class="text-sm text-slate-600 dark:text-slate-400">Arena</figcaption>
+            </figure> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CfP -->
+    <section id="tab-cfp" role="tabpanel" aria-labelledby="tabbtn-cfp" class="tabpanel hidden">
+      <h2 id="cfp" class="text-2xl font-bold mb-4">Call for Participation</h2>
+
+      <p class="text-center font-semibold">RoboCup@Home Brazil Open <span class="year"></span></p>
+      <p class="text-center"><span class="date"></span>, <span class="year"></span> (<span class="city"></span>)</p>
+
+      <div class="flex flex-wrap justify-center gap-3 my-3">
+        <a class="text-blue-600 hover:underline" href="https://cbr.robocup.org.br/" target="_blank" rel="noopener">cbr.robocup.org.br</a>
+        <a class="text-blue-600 hover:underline" href="https://olimpo.robocup.org.br/" target="_blank" rel="noopener">olimpo.robocup.org.br</a>
+        <a class="text-blue-600 hover:underline" href="https://github.com/RoboCupAtHomeLatinAmerica/RuleBook" target="_blank" rel="noopener">RuleBook (GitHub)</a>
+        <a class="text-blue-600 hover:underline" href="https://chat.whatsapp.com/BdsJZNjgLPZ7X4wjbB05UF" target="_blank" rel="noopener">WhatsApp Group</a>
+      </div>
+
+      <p class="mt-4">
+        RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots through competitions (RoboCup@Home, RoboCup Soccer, RoboCup Rescue, RoboCup@Work and RoboCup Junior).
+      </p>
+
+      <p class="mt-4">
+        The RoboCup@Home Brazil Open competition aims to develop service and assistive robot technology with high relevance for future personal domestic applications. It is the largest international annual competition for autonomous service robots and is part of the RoboCup initiative. A set of benchmark tests is used to evaluate the robots's abilities and performance in a realistic home environment setting. Focus lies on the following domains but is not limited to: Human-Robot-Interaction and Cooperation, Navigation and Mapping in dynamic environments, Computer Vision and Object Recognition under natural light conditions, Object Manipulation, Adaptive Behaviors, Behavior Integration, Ambient Intelligence, Standardization and System Integration.
+      </p>             
+
+      <p class="mt-4">
+        This page describes the preregistration and qualification procedure for RoboCup@Home <span class="year"></span>
+      </p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">The qualification procedure consists of the following steps:</h3>
+      <p>ll submissions must be made on the <a href="https://olimpo.robocup.org.br/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Olimpo</a> website.</p>
+      <ol class="list-decimal pl-6 space-y-1 mt-2">
+        <li>Pre-registration and submission of TDPs</li>
+        <li>Correction and resubmission of TDPs</li>
+        <li>Registration and Payment</li>
+        <li>Poster submission</li>
+      </ol>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Important dates:</h3>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>10/08/2025 - Deadline for pre-registration(submission of TDPs)</li> 
+        <li>18/08/2025 - Publication of TDP Results</li> 
+        <li>25/08/2025 - Deadline for correction and resubmission of TDPs</li> 
+        <li>30/08/2025 - Publication of qualified teams</li> 
+        <li>17/09/2025 - Deadline for Early Registration and Payment</li> 
+        <li>02/10/2025 - Deadline for Regular Registration and Payment</li> 
+        <li>13/10/2025 - Deadline for Late Registration and Payment</li>
+        <li>13/10/2025 - Deadline for Poster submitinon </li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Instructions for the Qualification Material</h3>
+      <p class="mt-2">
+        All teams must submit a TDP (Team Description Paper) to participate in the competition. 
+        The TDP is a scientific paper, detailing information on the technical and scientific approach of the team's research. 
+        The TDP should describe the ideas implemented by the team. You can describe the entire system or focus on one or two components - we recommend that innovative and important topics or alternative approaches adopted be included in the TDP, as the same problem and topics may interest other teams.                    
+        It is very important that the explanations are made in a clear and objective manner, assuming that the readers are familiar with topics related to the category (description, rules, etc.). Focus your text on the important topics of your work. It should explain the technical details of how your approach works so that other researchers can replicate your experiments and results. This way, all researchers can benefit from the experiences presented.
+      </p>
+      <p class="mt-2">
+        The language for the TDP, its graphics, tables, images, and all additional content must be English OR Portuguese. Content in other languages must be translated.
+      </p>
+      <p class="mt-2">
+        eams that do not submit a TDP or that have their TDP rejected will not be allowed to participate in the event even if they have paid the registration fee. 
+        Registration fees will not be refunded.
+      </p>
+      <p class="mt-2">
+        You may download a <a href="https://cbr.robocup.org.br/wp-content/uploads/2024/06/Robocup-Brazil-Template-1.zip" target="_blank" rel="noopener" class="text-blue-600 hover:underline">template</a> for the TDP from here.
+      </p>
+
+      <p class="mt-4">The TDP needs to include the following topics:</p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>Group's research focus and interests.
+        <li>Innovative technology and scientific contribution.
+        <li>Please specify when your research is being used by other teams or research groups.
+        <li>Please specify when you are using software from other teams.
+        <li>Brief, general description of the system when solving a domestic task (applicability in the real world).
+        <li>The impact of your research must be clearly visible.
+        <li>Maximum length is 6 pages (including figures and citations).
+
+      </ul>
+
+      <p class="mt-4">
+        Additional information about the robot must be sent via
+        <a class="text-blue-600 hover:underline" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSch8MFiJPzNzxLMTF1ATssK7ej7TRqHpCD9z-LlrtgT0FsdyQ/viewform">form</a>. In this form you will provide the following information:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-1">
+          <li>Photo of the robot.
+          <li>Brief, compact list of the 3rd party robot's software.
+          <li>Brief, compact description of the robot's hardware.
+          <li>Brief, compact description of all external computing devices, if any.
+      </ul>              
+
+      <p  class="mt-4">
+        Copyright note: All TDPs may be made publicly available in the <a href="https://github.com/RoboCupAtHomeLatinAmerica/RoboCupAtHomeLatinAmerica.github.io/wiki">RoboCup@Home Brazil Wiki</a> for further reference. On submitting, teams implicitly grant permission to RoboCup @Home Brazil to copy, distribute, upload, publish, and use the manuscript to promote the event and the league at convenience.
+      </p>  
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Qualification and evaluation criteria:</h3>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>clarity</li>
+        <li>completeness</li>
+        <li>scientific contributions</li>
+        <li>re-usability by the league</li>
+        <li>applicability in real world</li>
+        <li>Performance in local tournaments and previous competitions</li>
+        <li>Novelty of approach (what you do is new for @Home)</li>
+        <li>Focus on the scientific contribution and avoid brief descriptions of the overall system.</li>
+      </ul>
+
+      <p class="mt-8 text-center">
+      With kind regards, and looking forward to see your team in <span class="city"></span>, <br>The <span class="year"></span> RoboCup@Home Brazil Organizing Committee.
+      </p>
+    </section>
+
+    <!-- Score -->
+    <section id="tab-score" role="tabpanel" aria-labelledby="tabbtn-score" class="tabpanel hidden">
+      <h2 class="text-2xl font-bold mb-4">Score</h2>
+
+      <h3 class="text-xl font-semibold mt-6 mb-2">Poster</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="scorePosterTable"  class="min-w-[720px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Novelty</th>
+              <th scope="col" class="px-3 py-2">Relevance</th>
+              <th scope="col" class="px-3 py-2">Presentation</th>
+              <th scope="col" class="px-3 py-2 font-bold">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Stage 1</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="scoreStage1Table" class="min-w-[720px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Speech</th>
+              <th scope="col" class="px-3 py-2">Person</th>
+              <th scope="col" class="px-3 py-2">Navigation</th>
+              <th scope="col" class="px-3 py-2">Manipulation</th>
+              <th scope="col" class="px-3 py-2 font-bold">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2 font-bold">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Stage 2</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="scoreStage2Table" class="min-w-[720px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Carry My Luggage</th>
+              <th scope="col" class="px-3 py-2">Clean Up</th>
+              <th scope="col" class="px-3 py-2">Restaurant</th>
+              <th scope="col" class="px-3 py-2">GPSR</th>
+              <th scope="col" class="px-3 py-2 font-bold">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2 font-bold">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Final</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="scoreFinalTable" class="min-w-[520px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Internal</th>
+              <th scope="col" class="px-3 py-2">External</th>
+              <th scope="col" class="px-3 py-2">Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">Geral</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="scoreOverallTable" class="min-w-[720px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Poster</th>
+              <th scope="col" class="px-3 py-2">Stage 1</th>
+              <th scope="col" class="px-3 py-2">Stage 2</th>
+              <th scope="col" class="px-3 py-2">Final</th>
+              <th scope="col" class="px-3 py-2 font-bold">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2 font-bold">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Teams -->
+    <section id="tab-teams" role="tabpanel" aria-labelledby="tabbtn-teams" class="tabpanel hidden">
+      <h2 id="teams" class="text-2xl font-bold mb-4">Teams</h2>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="teamsTable" data-csv="csv/teams.csv" class="min-w-[900px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th scope="col" class="px-3 py-2">Team Name</th>
+              <th scope="col" class="px-3 py-2">Captain</th>
+              <th scope="col" class="px-3 py-2">Institution</th>
+              <th scope="col" class="px-3 py-2">TDP</th>
+              <th scope="col" class="px-3 py-2">Poster</th>
+              <th scope="col" class="px-3 py-2">Robot Name</th>
+              <th scope="col" class="px-3 py-2">Robot Photo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800">
+              <td class="px-3 py-2">-</td><td class="px-3 py-2">-</td><td class="px-3 py-2">-</td>
+              <td class="px-3 py-2"><a href="TDPs/" class="text-blue-600 hover:underline">TDP</a></td>
+              <td class="px-3 py-2"><a href="Posters/" class="text-blue-600 hover:underline">Poster</a></td>
+              <td class="px-3 py-2">-</td>
+              <td class="px-3 py-2"><a href="Photos/robots/" class="text-blue-600 hover:underline">Photo</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="tab-schedule" role="tabpanel" aria-labelledby="tabbtn-schedule" class="tabpanel hidden">
+      <h2 id="schedule" class="text-2xl font-bold mb-4">Schedule</h2>
+      <div class="rounded-md ring-1 ring-slate-200 dark:ring-slate-800 overflow-hidden">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FSao_Paulo&showPrint=0&title=Robocup%40Home%20Brazil&showNav=0&showTabs=0&mode=WEEK&showDate=0&src=MzA4ZjdlOThmZTQ1ZDI0ZjVkMjdiMGEzZDcyZTAyMzFlMmE4NTk0NTI1NzY5NmRhYTIyMDEzNmNkODNiODIzM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441&dates=20251013/20251019"
+          style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no" title="Agenda RoboCup@Home Brazil">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Tasks -->
+    <section id="tab-tasks" role="tabpanel" aria-labelledby="tabbtn-tasks" class="tabpanel hidden">
+      <h2 id="tasks" class="text-2xl font-bold mb-4">Tasks Info</h2>
+
+      <h3 class="text-xl font-semibold mt-6 mb-2">Objects</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+
+        <table id="objectsTable" class="min-w-[720px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th class="px-3 py-2">Drinks</th>
+              <th class="px-3 py-2">Cleaning supplies</th>
+              <th class="px-3 py-2">Pantry items</th>
+              <th class="px-3 py-2">Fruits</th>
+              <th class="px-3 py-2">Snacks</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">People Names</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md">
+        <table id="peopleTable" class="min-w-[520px] w-full text-left">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th class="px-3 py-2">#</th>
+              <th class="px-3 py-2">Male</th>
+              <th class="px-3 py-2">Female</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200 dark:border-slate-800"><td class="px-3 py-2">—</td><td class="px-3 py-2">—</td><td class="px-3 py-2">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <h3 class="text-xl font-semibold mt-8 mb-2">SR Contexts</h3>
+      <div class="overflow-x-auto ring-1 ring-slate-200 dark:ring-slate-800 rounded-md p-4 space-y-6">
+        <section>
+          <h4 class="font-semibold mb-2">Context 1</h4>
+          <pre id="sr-context-1" class="whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-200">Carregando…</pre>
+        </section>
+
+        <section>
+          <h4 class="font-semibold mb-2">Context 2</h4>
+          <pre id="sr-context-2" class="whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-200">Carregando…</pre>
+        </section>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-6">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm text-slate-600 dark:text-slate-400">
+      RoboCup@Home Brazil Open <span class="year"></span>
+    </div>
+  </footer>
+
+
+  <!-- JS -->
+  <script src="scripts/tabs.js" type="text/javascript"></script>
+  <script src="scripts/data.js" type="text/javascript"></script>
+  <script src="scripts/load_data.js" type="text/javascript"></script>
+  <script src="scripts/csv_parser.js" type="text/javascript"></script>
+  <script src="scripts/csv_parser2.js" type="text/javascript"></script>
+  <script src="scripts/csv_parser3.js" type="text/javascript"></script>
+  <script src="scripts/context.js" type="text/javascript"></script>
+  <script src="scripts/csv_parser_score.js" type="text/javascript"></script>
+
+
+  <script>
+  (function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+
+    function setOpen(open) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      nav.classList.toggle('hidden', !open);
+      // no mobile, empilha; no md+, já é flex horizontal
+      if (!nav.classList.contains('md:flex')) nav.classList.add('flex', 'flex-col', 'gap-2');
+    }
+
+    // abre/fecha ao clicar
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      setOpen(open);
+    });
+
+    // fecha ao apertar ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setOpen(false);
+    });
+
+    // fecha ao clicar em um item (útil no mobile)
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('button[role="tab"]')) setOpen(false);
+    });
+
+    // garante fechado em load e aberto no md+
+    setOpen(false);
+  })();
+  </script>
+
+</body>
+</html>
