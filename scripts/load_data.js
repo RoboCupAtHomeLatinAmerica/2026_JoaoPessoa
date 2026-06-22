@@ -6,9 +6,12 @@ document.querySelectorAll('.year').forEach(el => el.textContent = info.year ?? '
 document.querySelectorAll('.city').forEach(el => el.textContent = info.city ?? '');
 document.querySelectorAll('.date').forEach(el => el.textContent = info.date ?? '');
 
-// Chair
-const chairEl = document.querySelector('.chair');
-if (chairEl) chairEl.textContent = info.chair ?? '';
+// Chair (lista)
+const chairUl = document.querySelector('.chair');
+if (chairUl) {
+    const items = Array.isArray(info.chair) ? info.chair : [];
+    chairUl.innerHTML = items.map(n => `<li>${n}</li>`).join('');
+}
 
 // OC (lista)
 const ocUl = document.querySelector('.oc');

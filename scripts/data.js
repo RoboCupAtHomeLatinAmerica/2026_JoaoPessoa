@@ -4,7 +4,7 @@ const info = {
   city: "João Pessoa - Paraíba",
   chair: [
     "Fagner de Assis Moura Pimentel <fagnerpimentel@gmail.com>",
-    "Ana Patricia Magalhães (UNEB)",
+    "Ana Patricia Magalhães (UNEB) <apmagalhaes@uneb.br>",
   ],
   oc: [
     "Gabriela Bassegio (FEI)",
