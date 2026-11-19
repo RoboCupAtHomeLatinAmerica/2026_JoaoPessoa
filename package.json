@@ -1,0 +1,13 @@
+{
+  "name": "robocup-home-brazil-open-site",
+  "private": true,
+  "description": "Site estático do RoboCup@Home Brazil Open. O CSS é compilado e versionado em css/site.css.",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o css/site.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o css/site.css --watch",
+    "thumbs": "python3 tools/make_thumbs.py"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

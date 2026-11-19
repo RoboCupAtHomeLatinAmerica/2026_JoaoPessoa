@@ -1,0 +1,122 @@
+{
+  "name": "RoboCup@Home Brazil Open",
+  "year": "2026",
+  "city": "João Pessoa - Paraíba",
+  "dateText": "November 23 to 29",
+  "startDate": "2026-11-23",
+  "endDate": "2026-11-29",
+  "siteUrl": "https://robocupathomelatinamerica.github.io/2026_JoaoPessoa/",
+  "tagline": "Robotic service and assistance in real environments: HRI, navigation, manipulation and computer vision.",
+  "chairs": [
+    {
+      "name": "Fagner de Assis Moura Pimentel",
+      "email": "fagnerpimentel@gmail.com"
+    },
+    {
+      "name": "Ana Patricia Magalhães",
+      "affiliation": "UNEB",
+      "email": "apmagalhaes@uneb.br"
+    }
+  ],
+  "oc": [
+    {
+      "name": "Gabriela Bassegio",
+      "affiliation": "FEI"
+    },
+    {
+      "name": "Gustavo Fardo Armênio",
+      "affiliation": "UTFPR"
+    },
+    {
+      "name": "Alexandre Costa",
+      "affiliation": "UFG"
+    },
+    {
+      "name": "Rhayna Christiani Vasconcelos Marques Casado",
+      "affiliation": "USP"
+    }
+  ],
+  "links": {
+    "registration": "https://olimpo.robocup.org.br/",
+    "rules": "https://github.com/RoboCupAtHome/RuleBook/releases/download/2026.2/rulebook.pdf",
+    "rulebookRepo": "https://github.com/RoboCupAtHome/RuleBook",
+    "whatsapp": "https://chat.whatsapp.com/BdsJZNjgLPZ7X4wjbB05UF",
+    "cbr": "https://cbr.robocup.org.br/",
+    "tdpTemplate": "https://cbr.robocup.org.br/index.php/papers-tdps/",
+    "robotForm": "https://docs.google.com/forms/d/e/1FAIpQLSch8MFiJPzNzxLMTF1ATssK7ej7TRqHpCD9z-LlrtgT0FsdyQ/viewform",
+    "calendar": "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FSao_Paulo&showPrint=0&title=Robocup%40Home%20Brazil&showNav=0&showTabs=0&mode=WEEK&showDate=0&src=MzA4ZjdlOThmZTQ1ZDI0ZjVkMjdiMGEzZDcyZTAyMzFlMmE4NTk0NTI1NzY5NmRhYTIyMDEzNmNkODNiODIzM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441&dates=20261123/20261129"
+  },
+  "importantDates": [
+    {
+      "date": "24/08/2026",
+      "text": "Deadline for pre-registration (submission of TDPs, Website and Team Video)"
+    },
+    {
+      "date": "07/09/2026",
+      "text": "Publication of TDP Results"
+    },
+    {
+      "date": "14/09/2026",
+      "text": "Deadline for correction and resubmission of TDPs"
+    },
+    {
+      "date": "21/09/2026",
+      "text": "Publication of qualified teams"
+    },
+    {
+      "date": "29/10/2026",
+      "text": "Deadline for Early Registration and Payment"
+    },
+    {
+      "date": "15/11/2026",
+      "text": "Deadline for Regular Registration and Payment"
+    },
+    {
+      "date": "23/11/2026",
+      "text": "Deadline for Poster submission"
+    },
+    {
+      "date": "29/11/2026",
+      "text": "Deadline for Late Registration and Payment"
+    }
+  ],
+  "photos": [
+    {
+      "src": "Photos/robots.jpg",
+      "thumb": "Photos/thumbs/robots.webp",
+      "caption": "Robots",
+      "alt": "Placeholder: robots photo coming soon",
+      "w": 1200,
+      "h": 800,
+      "placeholder": true
+    },
+    {
+      "src": "Photos/teams.jpg",
+      "thumb": "Photos/thumbs/teams.webp",
+      "caption": "Teams",
+      "alt": "Placeholder: teams photo coming soon",
+      "w": 1200,
+      "h": 800,
+      "placeholder": true
+    },
+    {
+      "src": "Photos/RCB-H.png",
+      "caption": "Welcome drinks",
+      "alt": "Placeholder: welcome drinks photo coming soon",
+      "placeholder": true
+    },
+    {
+      "src": "Photos/RCB-H.png",
+      "caption": "Arena",
+      "alt": "Placeholder: arena photo coming soon",
+      "placeholder": true
+    }
+  ],
+  "objects": {
+    "placeholder": true
+  },
+  "results": {
+    "url": null,
+    "label": "Official results"
+  }
+}
