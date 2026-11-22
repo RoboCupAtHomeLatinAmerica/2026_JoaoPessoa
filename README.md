@@ -10,7 +10,8 @@ Site estático (GitHub Pages). Para ver localmente: `python3 -m http.server 8000
 | O que mudar | Onde |
 |---|---|
 | Datas, cidade, chairs, OC, links, datas importantes, fotos da Home, URL dos resultados | `data/event.json` |
-| Equipes (nome, capitão, instituição, TDP, pôster, robô, foto) | `csv/teams.csv` |
+| Equipes (nome, capitão, instituição, TDP, pôster, robô, foto, site, vídeo) | `csv/teams.csv` |
+| Hardware e software de cada robô (botão *Details* da aba Teams; chave = nome da equipe no CSV) | `data/team-details.json` |
 | Nomes de pessoas / objetos | `csv/people.csv`, `Photos/objects/index.csv` |
 | Aba Arena: imagens e lista de ambientes | `data/event.json` → `arena.images` (`src`, `caption`, `alt`, `w`, `h`, `wide`, `description` opcional) e `arena.rooms`; arquivos em `Photos/arena/` |
 | Texto do CfP e demais seções | `index.html` |

@@ -13,7 +13,8 @@ Hoje as 4 fotos da Home estão como placeholder ("Photo coming soon"). Para cada
 - [ ] Opcional: trocar `Photos/og-image.jpg` (hoje um recorte de `teams.jpg`) por uma foto desta edição, 1200×630.
 
 ### Conteúdo do site
-- [ ] **Preencher `csv/teams.csv`** (hoje só tem o cabeçalho, então a aba Teams aparece vazia). Já existem arquivos para: ada, bahiart, fbot, mecha, mimoso, pmec, robofei, unipdroidians, utbots, warthog (TDPs); faltam pôsteres de mimoso e unipdroidians; há 10 fotos em `Photos/robots/`.
+- [x] `csv/teams.csv` preenchido com as 9 equipes, a partir da planilha de complemento dos TDPs (capitão, instituição, robô, foto, site e vídeo).
+- [ ] **TDP e Pôster** de todas as equipes estão vazios em `csv/teams.csv` (a tabela mostra "Coming soon"): preencher com os arquivos de 2026 (`TDPs/<equipe>.pdf`, `Posters/<equipe>.pdf`) quando chegarem. Os de 2025 continuam nas pastas, sem uso. Sem uso: `TDPs/mimoso.pdf` e as fotos `athena`, `Mecha_Electra`, `UD-H1`, `MIMOSO`.
 - [x] Revisar `csv/people.csv` (nomes de pessoas) para esta edição.
 - [ ] Conferir as datas do CfP em `data/event.json`: "Late Registration" em 29/11 é o último dia do evento e "Poster submission" em 23/11 é o primeiro. Confirmar se estão certas.
 - [ ] Confirmar quem atende as equipes no local: o rodapé mostra o grupo do WhatsApp e o e-mail dos dois chairs (`data/event.json` → `chairs`). Trocar por um e-mail/telefone de plantão se houver.
@@ -48,3 +49,4 @@ Hoje as 4 fotos da Home estão como placeholder ("Photo coming soon"). Para cada
 
 ---
 Como manter o site: ver o fim do `README.md`.
+- [ ] `data/team-details.json` vem da planilha de complemento dos TDPs (resposta mais recente de cada equipe, sem os valores "None"/"N/A"). Se alguém reenviar o formulário, regerar o arquivo (os valores são só texto, em inglês ou português como foram preenchidos).

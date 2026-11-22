@@ -26,10 +26,15 @@ function setStatus(id, msg) {
 // "Photos/robots/Bill.jpg" -> "Photos/thumbs/robots/Bill.webp"
 const robotThumb = src => src.replace(/^Photos\/robots\/(.+)\.[^.]+$/i, 'Photos/thumbs/robots/$1.webp');
 
+// Célula vazia de TDP/Pôster: aviso discreto até o arquivo da edição atual existir.
+const soon = () => el('span', 'whitespace-nowrap text-sm text-slate-500 dark:text-slate-400', 'Coming soon');
+
 // Como cada coluna do CSV de equipes é exibida (por nome do cabeçalho).
 const TEAM_RENDERERS = {
-  'TDP': v => (v ? link(v, 'TDP') : ''),
-  'Poster': v => (v ? link(v, 'Poster') : ''),
+  'TDP': v => (v ? link(v, 'TDP') : soon()),
+  'Poster': v => (v ? link(v, 'Poster') : soon()),
+  'Website': v => (v ? link(v, 'Website') : ''),
+  'Video': v => (v ? link(v, 'Video') : ''),
   'Robot Photo': (v, row) => {
     if (!v) return '';
     const img = el('img', 'h-14 w-auto rounded ring-1 ring-slate-200 dark:ring-slate-800 bg-white');
@@ -43,27 +48,63 @@ const TEAM_RENDERERS = {
     return a;
   },
 };
-const UNSORTABLE = new Set(['TDP', 'Poster', 'Robot Photo']);
+const UNSORTABLE = new Set(['TDP', 'Poster', 'Robot Photo', 'Website', 'Video', 'Details']);
+
+// Painel com hardware e software informados no formulário de complemento dos TDPs.
+function detailsRow(team, info, span) {
+  const td = el('td', CELL + ' bg-slate-50 dark:bg-slate-800/40');
+  td.colSpan = span;
+  const group = (title, items) => {
+    const sec = el('section', 'mb-4 last:mb-0');
+    sec.append(el('h3', 'mb-2 text-sm font-semibold', title));
+    const dl = el('dl', 'grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3');
+    items.forEach(([k, v]) => dl.append(el('div', '', el('dt', 'text-xs text-slate-600 dark:text-slate-400', k), el('dd', '', v))));
+    sec.append(dl);
+    return sec;
+  };
+  td.setAttribute('aria-label', `Technical details of ${team}`);
+  if (info.hardware?.length) td.append(group('Hardware', info.hardware));
+  if (info.software?.length) td.append(group('Software', info.software));
+  const tr = el('tr', ROW, td);
+  tr.hidden = true;
+  return tr;
+}
 
 // Tabela de registros (uma linha por registro) com ordenação por coluna e busca.
-function buildRecordTable(table, rows, { renderers = {}, unsortable = new Set(), emptyText }) {
+function buildRecordTable(table, rows, { renderers = {}, unsortable = new Set(), emptyText, details = null }) {
   const [headers, ...data] = rows;
   const thead = table.createTHead();
   const tbody = table.tBodies[0] || table.createTBody();
   const state = { col: -1, dir: 1 };
+  const open = new Set();   // equipes com o painel de detalhes aberto (sobrevive à reordenação)
 
   const draw = () => {
     const order = data.map((r, i) => i);
     if (state.col >= 0) order.sort((a, b) => state.dir * collator.compare(data[a][state.col] ?? '', data[b][state.col] ?? ''));
-    tbody.replaceChildren(...order.map(i => {
+    tbody.replaceChildren(...order.flatMap(i => {
       const tr = el('tr', ROW);
+      const team = data[i][0], info = details?.[team];
+      let panel = null;
       headers.forEach((h, c) => {
         const val = data[i][c] ?? '';
-        const content = renderers[h] ? renderers[h](val, data[i]) : /^https?:\/\//i.test(val) ? link(val) : val;
+        let content;
+        if (h === 'Details') {
+          if (val && info) {
+            const b = el('button', LINK + ' whitespace-nowrap');
+            b.type = 'button';
+            const sync = () => { b.textContent = open.has(team) ? 'Hide' : 'Show'; b.setAttribute('aria-expanded', String(open.has(team))); };
+            b.addEventListener('click', () => { open.has(team) ? open.delete(team) : open.add(team); sync(); applyFilter(); });
+            sync();
+            content = b;
+            panel = detailsRow(team, info, headers.length);
+            panel.id = `details-${i}`; b.setAttribute('aria-controls', panel.id);
+          } else content = '';
+        } else content = renderers[h] ? renderers[h](val, data[i]) : /^https?:\/\//i.test(val) ? link(val) : val;
         tr.append(el('td', CELL, content));
       });
       tr.dataset.search = data[i].join(' ').toLowerCase();
-      return tr;
+      tr._panel = panel; tr._team = team;
+      return panel ? [tr, panel] : [tr];
     }));
     if (!data.length) tbody.append(el('tr', ROW, Object.assign(el('td', CELL + ' text-slate-600 dark:text-slate-400', emptyText || 'Nothing to show yet.'), { colSpan: headers.length })));
     thead.querySelectorAll('th').forEach((th, c) => th.setAttribute('aria-sort', c === state.col ? (state.dir > 0 ? 'ascending' : 'descending') : 'none'));
@@ -75,7 +116,10 @@ function buildRecordTable(table, rows, { renderers = {}, unsortable = new Set(),
     if (!input) return;
     const q = input.value.trim().toLowerCase();
     let shown = 0;
-    tbody.querySelectorAll('tr[data-search]').forEach(tr => { const ok = !q || tr.dataset.search.includes(q); tr.hidden = !ok; if (ok) shown++; });
+    tbody.querySelectorAll('tr[data-search]').forEach(tr => {
+      const ok = !q || tr.dataset.search.includes(q); tr.hidden = !ok; if (ok) shown++;
+      if (tr._panel) tr._panel.hidden = !ok || !open.has(tr._team);
+    });
     setStatus(`${table.id}Status`, q && data.length && !shown ? 'No results match your search.' : '');
   };
   input?.addEventListener('input', applyFilter);
@@ -99,13 +143,15 @@ function buildRecordTable(table, rows, { renderers = {}, unsortable = new Set(),
   draw();
 }
 
-async function loadRecordTable(id, renderers, unsortable, emptyText) {
+async function loadRecordTable(id, renderers, unsortable, emptyText, detailsPath) {
   const table = document.getElementById(id);
   if (!table) return;
   try {
     const rows = await fetchCSV(table.dataset.csv);
     if (!rows.length) throw new Error('empty CSV');
-    buildRecordTable(table, rows, { renderers, unsortable, emptyText });
+    let details = null;
+    if (detailsPath) { try { details = await (await fetch(detailsPath, { cache: 'no-cache' })).json(); } catch (e) { console.warn('No team details', e); } }
+    buildRecordTable(table, rows, { renderers, unsortable, emptyText, details });
   } catch (e) {
     console.error(`Could not load ${table.dataset.csv}`, e);
     setStatus(`${id}Status`, 'Could not load this table. Please try again later.');
@@ -170,7 +216,7 @@ async function loadObjects(placeholder = false) {
 
 export function initTables(ev) {
   return Promise.all([
-    loadRecordTable('teamsTable', TEAM_RENDERERS, UNSORTABLE, 'No teams registered yet.'),
+    loadRecordTable('teamsTable', TEAM_RENDERERS, UNSORTABLE, 'No teams registered yet.', 'data/team-details.json'),
     loadRecordTable('peopleTable', {}, new Set(), 'No names available yet.'),
     loadObjects(Boolean(ev?.objects?.placeholder)),
   ]);

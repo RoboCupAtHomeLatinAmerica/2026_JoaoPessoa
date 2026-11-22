@@ -1,0 +1,1004 @@
+{
+ "BahiaRT": {
+  "hardware": [
+   [
+    "Batteries",
+    "LiFePO4"
+   ],
+   [
+    "Base actuators",
+    "DC Motors"
+   ],
+   [
+    "Head actuators",
+    "MG995"
+   ],
+   [
+    "Arm actuators",
+    "LX16A"
+   ],
+   [
+    "Other actuators",
+    "HX5010"
+   ],
+   [
+    "Laser sensors",
+    "LiDAR LeiShen N10 and ASUS Xtion"
+   ],
+   [
+    "RGB sensors",
+    "ASUS Xtion"
+   ],
+   [
+    "RGB-D sensors",
+    "ASUS Xtion"
+   ],
+   [
+    "Display",
+    "Display Tela Lcd Nextion 3.5 Pol Touch Screen Nx4832t035, Display LCD 16×02 com módulo I2C, Modulo Display Oled 0.96 I2c Ssd1306 Lcd Arduino Pic, Faróis De Neblina Big Eye Com Led Ajustável 12v"
+   ],
+   [
+    "Speaker",
+    "Bluetooth Portable Izuum PJT-DSP2044, 3w, micro USB, 500 mAh"
+   ],
+   [
+    "Embedded system",
+    "Firmware dos microcontroladores (navegação, manipulação e IHR), hardware interface"
+   ],
+   [
+    "External devices",
+    "Microphone Lark M2"
+   ],
+   [
+    "Other hardware",
+    "Encoders"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Linux Ubuntu 24.04"
+   ],
+   [
+    "Middleware",
+    "ROS2 Jazzy"
+   ],
+   [
+    "Navigation",
+    "NAV2"
+   ],
+   [
+    "Localization",
+    "SLAM and AMCL"
+   ],
+   [
+    "Mapping",
+    "SLAM and OctoMap"
+   ],
+   [
+    "Object recognition",
+    "YOLO v8"
+   ],
+   [
+    "Manipulation",
+    "MoveIt!"
+   ],
+   [
+    "Human detection",
+    "YOLO v8"
+   ],
+   [
+    "Face detection",
+    "OpenCV, Haar-cascade"
+   ],
+   [
+    "Face recognition",
+    "Dlib"
+   ],
+   [
+    "Gesture recognition",
+    "YOLO v8"
+   ],
+   [
+    "Speech synthesis",
+    "Piper-TTS"
+   ],
+   [
+    "Speech recognition",
+    "Faster-whisper-large-v3-turbo-int8-ct2"
+   ],
+   [
+    "Natural language (NLP)",
+    "Phi3.5-mini"
+   ]
+  ]
+ },
+ "UTBots": {
+  "hardware": [
+   [
+    "Batteries",
+    "Li-Ion 10s2p"
+   ],
+   [
+    "Base actuators",
+    "Brushless Hoverboard Motors"
+   ],
+   [
+    "Head actuators",
+    "Pan-Tilt with 2 Servo Motors"
+   ],
+   [
+    "Arm actuators",
+    "6 Brushless Motors and 2 High Torque Servo Motors"
+   ],
+   [
+    "Laser sensors",
+    "RPLidar A1"
+   ],
+   [
+    "RGB sensors",
+    "Logitech C920"
+   ],
+   [
+    "RGB-D sensors",
+    "Intel Realsense d435i"
+   ],
+   [
+    "Other sensors",
+    "Comica VM10 Microphone"
+   ],
+   [
+    "Display",
+    "LCD HDMI Display"
+   ],
+   [
+    "Speaker",
+    "Multilaser SP350"
+   ],
+   [
+    "Embedded system",
+    "Intel NUC, NVIDIA Jetson AGX Orin"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Linux Ubuntu 22.04"
+   ],
+   [
+    "Middleware",
+    "ROS2"
+   ],
+   [
+    "Navigation",
+    "nav2"
+   ],
+   [
+    "Localization",
+    "amcl"
+   ],
+   [
+    "Mapping",
+    "slam_toolbox"
+   ],
+   [
+    "Object recognition",
+    "YOLOv11"
+   ],
+   [
+    "Manipulation",
+    "MoveIt2"
+   ],
+   [
+    "Human detection",
+    "MediaPipe Pose, YOLOv11"
+   ],
+   [
+    "Face detection",
+    "MTCNN"
+   ],
+   [
+    "Face recognition",
+    "FACENET512"
+   ],
+   [
+    "Gesture recognition",
+    "MediaPipe Pose + Own Algorithms"
+   ],
+   [
+    "Speech synthesis",
+    "MimicTTS, CoquiTTS"
+   ],
+   [
+    "Speech recognition",
+    "Silero VAD + rnnoise + Whisper STT"
+   ],
+   [
+    "Natural language (NLP)",
+    "RASA, LLama 3.2 8B"
+   ]
+  ]
+ },
+ "FBOT": {
+  "hardware": [
+   [
+    "Batteries",
+    "Hoverboard batteries Li-ion 36v 4400mAh"
+   ],
+   [
+    "Base actuators",
+    "Hoverboard Motors"
+   ],
+   [
+    "Head actuators",
+    "Micro servo motors"
+   ],
+   [
+    "Arm actuators",
+    "xArm6"
+   ],
+   [
+    "Other actuators",
+    "2 XL-430 Dynamixels for the camera and 2 MX-64 for the neck"
+   ],
+   [
+    "Laser sensors",
+    "1 SICK LiDAR (RSICK LMS-100) and 2 Hokuyos (URG-04LX-UG01)"
+   ],
+   [
+    "RGB-D sensors",
+    "1 Femto Bolt Orbbec camera and 1 RealSense D435i"
+   ],
+   [
+    "Display",
+    "Frontal: Galaxy Tab A9+; Back: Arzopa A1 15,6\""
+   ],
+   [
+    "Speaker",
+    "Hometheater Samsung"
+   ],
+   [
+    "Embedded system",
+    "CPU: Mini PC ASUS 13 PRO TALL GPU: Nvidia Jetson Orin AGX DevKit"
+   ],
+   [
+    "External devices",
+    "Steamdeck, Logitech F710 joystick"
+   ],
+   [
+    "Other hardware",
+    "Microphone: Rode VideoMic"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.04"
+   ],
+   [
+    "Middleware",
+    "ROS2"
+   ],
+   [
+    "Navigation",
+    "Nav2"
+   ],
+   [
+    "Localization",
+    "AMCL"
+   ],
+   [
+    "Mapping",
+    "Slam Toolbox"
+   ],
+   [
+    "Object recognition",
+    "Moondream2"
+   ],
+   [
+    "Manipulation",
+    "MoveIt MTC"
+   ],
+   [
+    "Human detection",
+    "YOLOv8"
+   ],
+   [
+    "Face detection",
+    "YOLOv8"
+   ],
+   [
+    "Face recognition",
+    "DeepFace"
+   ],
+   [
+    "Gesture recognition",
+    "YOLOv8"
+   ],
+   [
+    "Speech synthesis",
+    "NVIDIA Riva"
+   ],
+   [
+    "Speech recognition",
+    "Realtime STT"
+   ],
+   [
+    "Natural language (NLP)",
+    "HuggingFace"
+   ],
+   [
+    "Cloud services",
+    "OpenRouter"
+   ]
+  ]
+ },
+ "ATENA": {
+  "hardware": [
+   [
+    "Batteries",
+    "Li-ion com BMS"
+   ],
+   [
+    "Base actuators",
+    "2× Brushless DC hoverboard hub motors (differential drive)"
+   ],
+   [
+    "Arm actuators",
+    "3× DC motors + 2× servo motors (gripper)"
+   ],
+   [
+    "Laser sensors",
+    "1× SLAMTEC RPLIDAR A1, 2D, 360°"
+   ],
+   [
+    "RGB sensors",
+    "RGB is integrated into the RGB-D camera"
+   ],
+   [
+    "RGB-D sensors",
+    "1× Intel RealSense D435i"
+   ],
+   [
+    "Display",
+    "9-inch monitor"
+   ],
+   [
+    "Speaker",
+    "6W USB Stereo Speaker"
+   ],
+   [
+    "Embedded system",
+    "onboard computer running ROS 2 Humble in Docker"
+   ],
+   [
+    "Other hardware",
+    "Custom motor-control electronics / microcontroller-based driver board"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 24"
+   ],
+   [
+    "Middleware",
+    "ROS 2 Humble Hawksbill"
+   ],
+   [
+    "Navigation",
+    "Nav2"
+   ],
+   [
+    "Localization",
+    "RTAB-Map"
+   ],
+   [
+    "Mapping",
+    "RTAB-Map"
+   ],
+   [
+    "Object recognition",
+    "YOLOv8 / Ultralytics (custom-trained dataset)"
+   ],
+   [
+    "Manipulation",
+    "Custom ROS 2 manipulation package + inverse kinematics"
+   ],
+   [
+    "Human detection",
+    "YOLO"
+   ],
+   [
+    "Face detection",
+    "YOLO"
+   ],
+   [
+    "Face recognition",
+    "YOLO"
+   ],
+   [
+    "Gesture recognition",
+    "YOLO"
+   ],
+   [
+    "Speech synthesis",
+    "Chatterbox TTS:"
+   ],
+   [
+    "Speech recognition",
+    "vosk"
+   ],
+   [
+    "Natural language (NLP)",
+    "Chatterbox TTS:"
+   ]
+  ]
+ },
+ "Pequi Mecânico": {
+  "hardware": [
+   [
+    "Batteries",
+    "Lithium Ion"
+   ],
+   [
+    "Base actuators",
+    "Jackal UGV"
+   ],
+   [
+    "Head actuators",
+    "Dynamixel XM540 and XM430"
+   ],
+   [
+    "Arm actuators",
+    "Dynamixel XM540 and XM430"
+   ],
+   [
+    "Laser sensors",
+    "RP Lidar A2"
+   ],
+   [
+    "RGB sensors",
+    "Realsense d435i, d455"
+   ],
+   [
+    "RGB-D sensors",
+    "Realsense d435i, d455"
+   ],
+   [
+    "Display",
+    "Touchscreen Lcd 10\""
+   ],
+   [
+    "Speaker",
+    "LG XBOOM 5"
+   ],
+   [
+    "Embedded system",
+    "Jackal UGV Embedded Computer, Jetson Orin AGX"
+   ],
+   [
+    "External devices",
+    "PS4 Joystick"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.04"
+   ],
+   [
+    "Middleware",
+    "ROS2 Humble"
+   ],
+   [
+    "Navigation",
+    "Nav2"
+   ],
+   [
+    "Localization",
+    "Rtabmap ICP and Robot Localization"
+   ],
+   [
+    "Mapping",
+    "Rtabmap"
+   ],
+   [
+    "Object recognition",
+    "Yolo11"
+   ],
+   [
+    "Manipulation",
+    "Moveit and Interbotix Python API"
+   ],
+   [
+    "Human detection",
+    "Yolo11"
+   ],
+   [
+    "Face detection",
+    "DeepFace"
+   ],
+   [
+    "Face recognition",
+    "DeepFace"
+   ],
+   [
+    "Gesture recognition",
+    "MediaPipe"
+   ],
+   [
+    "Speech synthesis",
+    "FastSpeech HiFiGAN"
+   ],
+   [
+    "Speech recognition",
+    "Parakeet"
+   ],
+   [
+    "Natural language (NLP)",
+    "qwen2.5vl"
+   ]
+  ]
+ },
+ "Robotecos": {
+  "hardware": [
+   [
+    "Batteries",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "Base actuators",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "Torso actuators",
+    "Unitree Specifications"
+   ],
+   [
+    "Head actuators",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "Arm actuators",
+    "Unitree Specifications"
+   ],
+   [
+    "Other actuators",
+    "Unitree Specifications"
+   ],
+   [
+    "Laser sensors",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "RGB sensors",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "RGB-D sensors",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "Other sensors",
+    "Unitree/Temi Specifications"
+   ],
+   [
+    "Display",
+    "Temi Specifications"
+   ],
+   [
+    "Speaker",
+    "JBL /Temi Specifications"
+   ],
+   [
+    "Embedded system",
+    "Jetson G1 Unitree/Temi Specifications"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.04 / Android 11"
+   ],
+   [
+    "Middleware",
+    "ROS2"
+   ],
+   [
+    "Navigation",
+    "NAV2"
+   ],
+   [
+    "Localization",
+    "SLAM"
+   ],
+   [
+    "Mapping",
+    "SLAM"
+   ],
+   [
+    "Object recognition",
+    "YOLO"
+   ],
+   [
+    "Manipulation",
+    "MoveIt2"
+   ],
+   [
+    "Human detection",
+    "YOLO/Homemade"
+   ],
+   [
+    "Face detection",
+    "YOLO/Homemade"
+   ],
+   [
+    "Face recognition",
+    "YOLO/Homemade"
+   ],
+   [
+    "Gesture recognition",
+    "YOLO/Homemade"
+   ],
+   [
+    "Speech synthesis",
+    "Google API/Whisper API"
+   ],
+   [
+    "Speech recognition",
+    "Google API/Whisper API"
+   ],
+   [
+    "Natural language (NLP)",
+    "Chat GPT API"
+   ],
+   [
+    "Cloud services",
+    "Azure"
+   ]
+  ]
+ },
+ "Warthog": {
+  "hardware": [
+   [
+    "Batteries",
+    "Lead Acid 7Ah 12V"
+   ],
+   [
+    "Base actuators",
+    "Reversible-DC motors"
+   ],
+   [
+    "Arm actuators",
+    "Servo motors MG996R, HS-T785HB, MG90S"
+   ],
+   [
+    "Laser sensors",
+    "Hokuyo URG04LX-UG01"
+   ],
+   [
+    "RGB sensors",
+    "Microsoft Xbox One Kinect"
+   ],
+   [
+    "RGB-D sensors",
+    "Microsoft Xbox One Kinect"
+   ],
+   [
+    "Other sensors",
+    "Boya BY-MM1 microphone"
+   ],
+   [
+    "Display",
+    "Waveshare LCD 7''"
+   ],
+   [
+    "Speaker",
+    "Dell AX210"
+   ],
+   [
+    "Embedded system",
+    "Ultratop LIVA ZE Plus I7 7500U"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.02 LTS"
+   ],
+   [
+    "Middleware",
+    "ROS2 and Docker"
+   ],
+   [
+    "Navigation",
+    "Nav2 and ROSAria2"
+   ],
+   [
+    "Localization",
+    "Nav2_amcl package"
+   ],
+   [
+    "Mapping",
+    "SLAM toolbox library"
+   ],
+   [
+    "Object recognition",
+    "YOLOv8"
+   ],
+   [
+    "Manipulation",
+    "MoveIt 2"
+   ],
+   [
+    "Human detection",
+    "YOLOv8 and MediaPipe"
+   ],
+   [
+    "Face detection",
+    "YOLOv8"
+   ],
+   [
+    "Face recognition",
+    "face_recognition"
+   ],
+   [
+    "Gesture recognition",
+    "MediaPipe"
+   ],
+   [
+    "Speech synthesis",
+    "Nix-TTS"
+   ],
+   [
+    "Speech recognition",
+    "Google Cloud Speech-to-Text and Whisper"
+   ],
+   [
+    "Natural language (NLP)",
+    "RoBERTa and LLaMA3.1-8B"
+   ],
+   [
+    "Cloud services",
+    "Google Cloud Speech-to-Text"
+   ]
+  ]
+ },
+ "RoboFEI": {
+  "hardware": [
+   [
+    "Batteries",
+    "LiPo rechargeable battery pack(s)"
+   ],
+   [
+    "Base actuators",
+    "4× high-torque DC drive motors, independently driving the four Mecanum wheels for holonomic motion"
+   ],
+   [
+    "Torso actuators",
+    "1× 12 V brushless motor driving a leadscrew-based vertical prismatic joint, providing approximately 0.6 m of vertical manipulator displacement"
+   ],
+   [
+    "Head actuators",
+    "2× Dynamixel XM430 servo actuators for pan and tilt movements"
+   ],
+   [
+    "Arm actuators",
+    "6× Dynamixel XM540 actuators for the 6-DOF robotic arm and 2× Dynamixel XM430 actuators for the flexible gripper"
+   ],
+   [
+    "Other actuators",
+    "Flexible two-actuator gripper and vertically actuated manipulator support. No additional actuators beyond the base, lift, arm, gripper, and head are currently specified"
+   ],
+   [
+    "Laser sensors",
+    "2× Slamtec RPLIDAR C1 360° 2D laser scanners"
+   ],
+   [
+    "RGB sensors",
+    "RGB camera integrated into the Intel RealSense D435i. No additional dedicated RGB-only camera is specified in the current New-Hera configuration"
+   ],
+   [
+    "RGB-D sensors",
+    "1× Intel RealSense D435i RGB-D camera for color, depth, and visual perception"
+   ],
+   [
+    "Other sensors",
+    "emergency-stop system, manipulator actuator/load feedback, and limit microswitches. HyperX QuadCast microphone for audio perception and speech interaction"
+   ],
+   [
+    "Display",
+    "Samsung Galaxy Tab S6 Lite, used as the robot's visual Human-Robot Interaction interfac"
+   ],
+   [
+    "Speaker",
+    "Integrated audio output through the Human-Robot Interaction system / Samsung Galaxy Tab S6 Lite"
+   ],
+   [
+    "Embedded system",
+    "Dell OptiPlex 7020 Micro as the main onboard controller and NVIDIA Jetson Orin Nano as the embedded AI accelerator, interconnected through Gigabit Ethernet"
+   ],
+   [
+    "External devices",
+    "None required for core autonomous operation. New-Hera is designed for offline-first operation. Internet/cloud connectivity is optional and may provide complementary OpenAI API and Google Speech services"
+   ],
+   [
+    "Other hardware",
+    "Custom modular acrylic structure; carbon-fiber manipulator links; flexible gripper; physical emergency stop and bumpers;"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.04 LTS"
+   ],
+   [
+    "Middleware",
+    "ROS 2 Humble"
+   ],
+   [
+    "Navigation",
+    "Nav2 (ROS 2 Navigation Stack)"
+   ],
+   [
+    "Localization",
+    "ROS 2/Nav2 localization based on 2D laser sensing and odometry"
+   ],
+   [
+    "Mapping",
+    "ROS 2-compatible SLAM and mapping pipeline"
+   ],
+   [
+    "Object recognition",
+    "YOLO11-based onboard object detection"
+   ],
+   [
+    "Manipulation",
+    "MoveIt 2"
+   ],
+   [
+    "Human detection",
+    "YOLO11 and MediaPipe-based perception"
+   ],
+   [
+    "Face detection",
+    "Dlib-based computer-vision components"
+   ],
+   [
+    "Face recognition",
+    "Dlib-based facial feature extraction and recognition components"
+   ],
+   [
+    "Gesture recognition",
+    "MediaPipe-based human pose and gesture analysis"
+   ],
+   [
+    "Speech synthesis",
+    "Piper-based local Text-to-Speech (TTS)"
+   ],
+   [
+    "Speech recognition",
+    "Faster-Whisper and RealTimeSTT"
+   ],
+   [
+    "Natural language (NLP)",
+    "Local command interpretation and semantic processing for core robot tasks, complemented when appropriate by the OpenAI API for more advanced natural-language understanding and generation"
+   ],
+   [
+    "Cloud services",
+    "Optional OpenAI API for advanced natural-language understanding/generation and Google Speech services as an online voice-processing backup"
+   ]
+  ]
+ },
+ "UnipDroidians": {
+  "hardware": [
+   [
+    "Batteries",
+    "1x 12V Stationary Battery. + 3x 20V Lithium-ion Battery: Dewalt."
+   ],
+   [
+    "Base actuators",
+    "2x LK MG8016E-i6"
+   ],
+   [
+    "Torso actuators",
+    "20V Lithium-ion Battery: Dewalt."
+   ],
+   [
+    "Arm actuators",
+    "20V Lithium-ion Battery: Dewalt."
+   ],
+   [
+    "Laser sensors",
+    "RPLIDAR C1"
+   ],
+   [
+    "RGB sensors",
+    "USB Webcam"
+   ],
+   [
+    "RGB-D sensors",
+    "Intel RealSense D457"
+   ],
+   [
+    "Other sensors",
+    "Micro-switches, infrared proximity sensors e JSN-SR04T ultrasonic distance sensor."
+   ],
+   [
+    "Display",
+    "Monitor Open Frame Touch Screen Resistivo 7″ – Spider Essence"
+   ],
+   [
+    "Speaker",
+    "Caixa de Som Amplificada Amvox ACA 150 Pop Preto 150W Bluetooth Até 4 Horas de Bateria"
+   ],
+   [
+    "Embedded system",
+    "NUC N150 + RaspPI 4 8GB + Jetson Nano 8GB- (Ubuntu 22.04 + ROS 2 Humble)"
+   ],
+   [
+    "Other hardware",
+    "3x Arduino UNO - 1x ESP32 - 4x stepdown (subsistemas e safety)"
+   ]
+  ],
+  "software": [
+   [
+    "Operating system",
+    "Ubuntu 22.04 + ROS 2 Humble"
+   ],
+   [
+    "Middleware",
+    "ROS 2 communication framework. Key packages: cartographer_ros, nav2, realsense2_camera, yolov8_ros"
+   ],
+   [
+    "Navigation",
+    "SLAM with Cartographer using RPLIDAR C1."
+   ],
+   [
+    "Localization",
+    "AMCL fused with LIDAR data for robust localization. Sensor fusion using IMU + RealSense depth to handle drift and occlusions"
+   ],
+   [
+    "Mapping",
+    "Cartographer currently provides the most stable 2D mapping results. Integration of RealSense D457"
+   ],
+   [
+    "Object recognition",
+    "YOLOv8 running on the Jetson and integrated with ROS 2"
+   ],
+   [
+    "Manipulation",
+    "OpenARM 7DoF - DAMIAO (ROS 2 MoveIt)"
+   ],
+   [
+    "Human detection",
+    "LIDAR for close-range proximity detection RGB + YOLO for human detection under varying light conditions."
+   ],
+   [
+    "Face detection",
+    "OpenCV HOG-based face detector using the main RGB camera."
+   ],
+   [
+    "Gesture recognition",
+    "OpenCV + MediaPipe for hand and body gesture tracking integrated into ROS 2."
+   ],
+   [
+    "Speech synthesis",
+    "Edge-TTS (speech synthesis engine). And offline, pyttsx3"
+   ],
+   [
+    "Speech recognition",
+    "Google STT for online mode; PocketSphinx as offline fallback"
+   ],
+   [
+    "Natural language (NLP)",
+    "SpaCy or Rasa for command interpretation and dialog management"
+   ],
+   [
+    "Cloud services",
+    "Microsoft Azure for offloading demanding AI tasks"
+   ]
+  ]
+ }
+}
