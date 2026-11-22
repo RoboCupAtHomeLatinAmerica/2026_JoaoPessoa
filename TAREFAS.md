@@ -14,9 +14,7 @@ Hoje as 4 fotos da Home estão como placeholder ("Photo coming soon"). Para cada
 
 ### Conteúdo do site
 - [ ] **Preencher `csv/teams.csv`** (hoje só tem o cabeçalho, então a aba Teams aparece vazia). Já existem arquivos para: ada, bahiart, fbot, mecha, mimoso, pmec, robofei, unipdroidians, utbots, warthog (TDPs); faltam pôsteres de mimoso e unipdroidians; há 10 fotos em `Photos/robots/`.
-- [ ] Revisar `csv/people.csv` (nomes de pessoas) para esta edição.
-- [ ] **Objetos (Tasks Info)** estão como placeholder até a semana da competição (a lista atual é da edição anterior). Quando a lista estiver definida: atualizar `Photos/objects/` e `Photos/objects/index.csv`, rodar `python3 tools/make_thumbs.py` e remover `"objects": { "placeholder": true }` do `data/event.json`.
-- [ ] Incluir `Photos/objects/Others/Bag.PNG` em `Photos/objects/index.csv` (existe a foto, mas não aparece na tabela) ou apagar o arquivo.
+- [x] Revisar `csv/people.csv` (nomes de pessoas) para esta edição.
 - [ ] Conferir as datas do CfP em `data/event.json`: "Late Registration" em 29/11 é o último dia do evento e "Poster submission" em 23/11 é o primeiro. Confirmar se estão certas.
 - [ ] Confirmar quem atende as equipes no local: o rodapé mostra o grupo do WhatsApp e o e-mail dos dois chairs (`data/event.json` → `chairs`). Trocar por um e-mail/telefone de plantão se houver.
 - [ ] Conferir links: Olimpo, regulamento 2026.2, grupo do WhatsApp, template do TDP, formulário do robô.
@@ -39,7 +37,7 @@ Hoje as 4 fotos da Home estão como placeholder ("Photo coming soon"). Para cada
 - [ ] Avisar mudanças de horário no grupo do WhatsApp e na agenda.
 - [ ] Publicar o link do sistema de pontuação (`results.url`) no primeiro dia.
 - [ ] Subir as fotos reais do evento (arena, welcome drinks, equipes) e atualizar `data/event.json`.
-- [ ] **Publicar a lista de objetos** (ver tarefa em "Antes": desligar `objects.placeholder`).
+- [ ] Se a lista de objetos mudar: ajustar nomes, categorias e recortes em `tools/import_objects.py` e rodar `python3 tools/import_objects.py <pasta_das_fotos> && python3 tools/make_thumbs.py` (a lista atual, com 27 fotos, já está publicada).
 - [ ] Atualizar `csv/teams.csv` se houver inscrição tardia ou troca de robô.
 - [ ] Guardar cópia dos resultados e das fotos ao fim de cada dia.
 

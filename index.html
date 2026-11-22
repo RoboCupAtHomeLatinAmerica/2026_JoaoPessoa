@@ -53,6 +53,8 @@
           class="tabbtn rounded-md border border-slate-300 px-3 py-2 text-sm data-[active=true]:border-blue-700 data-[active=true]:bg-blue-700 data-[active=true]:text-white dark:border-slate-600">Teams</button>
         <button type="button" role="tab" id="tabbtn-schedule" aria-controls="tab-schedule" aria-selected="false" tabindex="-1" data-tab="schedule"
           class="tabbtn rounded-md border border-slate-300 px-3 py-2 text-sm data-[active=true]:border-blue-700 data-[active=true]:bg-blue-700 data-[active=true]:text-white dark:border-slate-600">Schedule</button>
+        <button type="button" role="tab" id="tabbtn-arena" aria-controls="tab-arena" aria-selected="false" tabindex="-1" data-tab="arena"
+          class="tabbtn rounded-md border border-slate-300 px-3 py-2 text-sm data-[active=true]:border-blue-700 data-[active=true]:bg-blue-700 data-[active=true]:text-white dark:border-slate-600">Arena</button>
         <button type="button" role="tab" id="tabbtn-tasks" aria-controls="tab-tasks" aria-selected="false" tabindex="-1" data-tab="tasks"
           class="tabbtn rounded-md border border-slate-300 px-3 py-2 text-sm data-[active=true]:border-blue-700 data-[active=true]:bg-blue-700 data-[active=true]:text-white dark:border-slate-600">Tasks Info</button>
         <button type="button" role="tab" id="tabbtn-results" aria-controls="tab-results" aria-selected="false" tabindex="-1" data-tab="results" hidden
@@ -250,6 +252,28 @@
         <iframe loading="lazy"
           src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FSao_Paulo&showPrint=0&title=Robocup%40Home%20Brazil&showNav=0&showTabs=0&mode=WEEK&showDate=0&src=MzA4ZjdlOThmZTQ1ZDI0ZjVkMjdiMGEzZDcyZTAyMzFlMmE4NTk0NTI1NzY5NmRhYTIyMDEzNmNkODNiODIzM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441&dates=20261123/20261129"
           style="border-width:0" width="100%" height="600" title="RoboCup@Home Brazil schedule (Google Calendar)"></iframe>
+      </div>
+    </section>
+
+    <!-- Arena -->
+    <section id="tab-arena" role="tabpanel" aria-labelledby="tabbtn-arena" class="tabpanel" hidden>
+      <h2 class="mb-2 text-2xl font-bold">Arena</h2>
+      <p id="arenaIntro" class="mb-6 text-slate-600 dark:text-slate-300"></p>
+
+      <div id="arenaGallery" class="grid gap-6 sm:grid-cols-2"></div>
+
+      <div id="arenaRoomsWrap" class="mt-10" hidden>
+        <h3 class="mb-2 text-xl font-semibold">Rooms</h3>
+        <div class="max-w-xl overflow-x-auto rounded-md ring-1 ring-slate-200 dark:ring-slate-800">
+          <table class="w-full text-left">
+            <caption class="sr-only">Arena rooms and their areas</caption>
+            <thead class="bg-slate-50 dark:bg-slate-800/50">
+              <tr><th scope="col" class="px-3 py-2 font-semibold">Room</th><th scope="col" class="px-3 py-2 text-right font-semibold">Area (m²)</th></tr>
+            </thead>
+            <tbody id="arenaRoomsBody"></tbody>
+          </table>
+        </div>
+        <p id="arenaOverall" class="mt-2 text-sm text-slate-600 dark:text-slate-400" hidden></p>
       </div>
     </section>
 

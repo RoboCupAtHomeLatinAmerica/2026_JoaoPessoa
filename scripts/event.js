@@ -85,6 +85,41 @@ function photoCard(p) {
   return fig;
 }
 
+function arenaImageCard(p) {
+  const fig = el('figure', { class: 'space-y-2' + (p.wide ? ' mx-auto w-full sm:col-span-2' : '') });
+  if (p.wide && p.w) fig.style.maxWidth = `${p.w}px`;   // não amplia além do tamanho original (fica nítida)
+  const img = el('img', {
+    src: p.thumb || p.src, alt: p.alt, loading: 'lazy', decoding: 'async',
+    class: 'w-full rounded-md bg-white ring-1 ring-slate-200 dark:ring-slate-700',
+  });
+  if (p.w) { img.width = p.w; img.height = p.h; }
+  fig.append(el('a', { href: p.src, target: '_blank', rel: 'noopener', 'aria-label': `${p.caption} (full size)` }, img));
+  const cap = el('figcaption', { class: 'text-sm text-slate-600 dark:text-slate-400' }, p.caption);
+  if (p.description) cap.append(el('span', { class: 'mt-1 block' }, p.description));
+  fig.append(cap);
+  return fig;
+}
+
+// Aba Arena: imagens (arena.images) e lista de ambientes (arena.rooms) vêm de data/event.json.
+function renderArena(a) {
+  if (!a) return;
+  const intro = $('#arenaIntro');
+  if (intro) { intro.textContent = a.intro ?? ''; intro.hidden = !a.intro; }
+  $('#arenaGallery')?.replaceChildren(...(a.images ?? []).map(arenaImageCard));
+  const rooms = a.rooms ?? [];
+  const wrap = $('#arenaRoomsWrap');
+  if (wrap) wrap.hidden = !rooms.length;
+  $('#arenaRoomsBody')?.replaceChildren(...rooms.map(r => {
+    const tr = el('tr', { class: 'border-t border-slate-200 dark:border-slate-800' });
+    const name = el('td', { class: 'px-3 py-2' }, r.name);
+    if (r.label) name.append(' ', el('span', { class: 'text-slate-500 dark:text-slate-400' }, `(${r.label})`));
+    tr.append(name, el('td', { class: 'px-3 py-2 text-right tabular-nums' }, Number(r.area).toFixed(1)));
+    return tr;
+  }));
+  const overall = $('#arenaOverall');
+  if (overall) { overall.textContent = a.overall ? `Overall dimensions: ${a.overall}` : ''; overall.hidden = !a.overall; }
+}
+
 export async function loadEvent() {
   const res = await fetch('data/event.json', { cache: 'no-cache' });
   if (!res.ok) throw new Error(`data/event.json: HTTP ${res.status}`);
@@ -106,6 +141,7 @@ export async function loadEvent() {
   renderContact(ev);
 
   $('#photosGrid')?.replaceChildren(...ev.photos.map(photoCard));
+  renderArena(ev.arena);
 
   // Aba de resultados: só aparece quando existir uma URL em data/event.json -> results.url
   if (ev.results?.url) {

@@ -112,6 +112,75 @@
       "placeholder": true
     }
   ],
+  "arena": {
+    "intro": "Layout of the competition arena.",
+    "images": [
+      {
+        "src": "Photos/arena/floor-plan-clean.png",
+        "caption": "Arena floor plan",
+        "alt": "Top-down floor plan of the arena with a living room, kitchen, bedroom, home office, balcony and laundry room",
+        "w": 960,
+        "h": 679,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-locations.png",
+        "caption": "Arena locations",
+        "alt": "Floor plan of the arena with numbered labels naming each piece of furniture; an asterisk marks locations where objects can be placed",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-objects.png",
+        "caption": "Object categories and their locations",
+        "alt": "Floor plan of the arena with numbered markers showing where each object category is located: snacks, cleaning supplies, pantry items, fruits, drinks, personal care and fabrics",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-inspection.png",
+        "caption": "Inspection point",
+        "alt": "Floor plan of the arena with a red marker showing the location of the robot inspection point",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-hri.png",
+        "caption": "HRI – Human Robot Interaction",
+        "alt": "Floor plan of the arena for the HRI task, showing the start point, living room and entrance door",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-pp.png",
+        "caption": "P&P – Pick and Place",
+        "alt": "Floor plan of the arena for the P&P task, showing the test location, start location, extra surface, dishwasher tab, and bowl and spoon",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-gpsr.png",
+        "caption": "GPSR – General Purpose Service Robot",
+        "alt": "Floor plan of the arena for the GPSR task, showing the test location, start location and instruction location",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      },
+      {
+        "src": "Photos/arena/floor-plan-dl.png",
+        "caption": "DL – Doing Laundry",
+        "alt": "Floor plan of the arena for the DL task, showing the start location, test location and laundry table",
+        "w": 1220,
+        "h": 760,
+        "wide": true
+      }
+    ]
+  },
   "results": {
     "url": null,
     "label": "Official results"
