@@ -33,7 +33,7 @@ def make(src: Path, dst: Path, max_side: int, quality: int = 80) -> None:
 
 def main() -> None:
     for f in sorted((PHOTOS / "objects").rglob("*")):
-        if f.is_file() and f.suffix.lower() in EXTS:
+        if f.is_file() and f.suffix.lower() in EXTS and "originals" not in f.parts:
             make(f, THUMBS / "objects" / f.parent.name / (f.stem + ".webp"), 240)
     for f in sorted((PHOTOS / "robots").glob("*")):
         if f.is_file() and f.suffix.lower() in EXTS:
