@@ -38,7 +38,7 @@ Hoje as 4 fotos da Home estão como placeholder ("Photo coming soon"). Para cada
 - [ ] Avisar mudanças de horário no grupo do WhatsApp e na agenda.
 - [ ] Publicar o link do sistema de pontuação (`results.url`) no primeiro dia.
 - [ ] Subir as fotos reais do evento (arena, welcome drinks, equipes) e atualizar `data/event.json`.
-- [ ] Se a lista de objetos mudar: ajustar nomes, categorias e recortes em `tools/import_objects.py` e rodar `python3 tools/import_objects.py <pasta_das_fotos> && python3 tools/make_thumbs.py` (a lista atual, com 27 fotos, já está publicada).
+- [ ] Se a lista de objetos mudar: ajustar nomes, categorias e recortes em `tools/import_objects.py` e rodar `python3 tools/import_objects.py <pasta_das_fotos> && python3 tools/make_thumbs.py` (a lista atual, com 35 fotos em 8 categorias, já está publicada; o script não grava mais `Photos/objects/originals/`, os originais ficam só no Drive).
 - [ ] Atualizar `csv/teams.csv` se houver inscrição tardia ou troca de robô.
 - [ ] Guardar cópia dos resultados e das fotos ao fim de cada dia.
 

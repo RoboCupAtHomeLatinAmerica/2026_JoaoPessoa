@@ -3,20 +3,19 @@
 
 Para cada foto: recorta um quadrado em volta do objeto, salva em
   Photos/objects/<Categoria>/<Nome>.jpg      (600x600, usado no site)
-  Photos/objects/originals/<Nome>.jpg        (foto original, sem alteração)
 e reescreve Photos/objects/index.csv (uma coluna por categoria).
 Depois rode:  python3 tools/make_thumbs.py
 
 Uso:  python3 tools/import_objects.py <pasta_com_as_fotos> [--preview <arquivo.jpg>]
 O mapeamento (foto -> categoria/nome/recorte) está em OBJECTS abaixo; edite-o para ajustar.
 """
-import csv, shutil, sys, unicodedata
+import csv, sys, unicodedata
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 OBJ = ROOT / "Photos" / "objects"
-CATEGORIES = ["Drinks", "Cleaning supplies", "Pantry items", "Fruits", "Snacks", "Personal care", "Others"]
+CATEGORIES = ["Drinks", "Cleaning supplies", "Pantry items", "Fruits", "Snacks", "Personal care", "Tableware", "Others"]
 SIZE = 600
 
 # foto (hora do arquivo) -> (categoria, nome, centro x, centro y, lado do quadrado) em pixels da foto 1080x1440
@@ -47,7 +46,15 @@ OBJECTS = {
     "094652": ("Fruits", "Kiwi", 560, 712, 550),
     "094734": ("Fruits", "Lime", 571, 674, 500),
     "094815": ("Fruits", "Green apple", 537, 674, 500),
-    "095120": ("Others", "Cutlery", 571, 733, 910),
+    # fotos de 23/11 (fotos do dia 23 em paisagem: 1440x1080; lado máximo do recorte = 1080)
+    "132602": ("Others", "Reusable bag", 540, 665, 1080),
+    "132802": ("Tableware", "Plate", 532, 755, 950),
+    "132811": ("Tableware", "Bowl", 765, 512, 1000),
+    "132843": ("Tableware", "Cup", 547, 623, 800),
+    "132855": ("Snacks", "Cereal", 520, 706, 700),
+    "133008": ("Tableware", "Fork", 675, 477, 900),
+    "133015": ("Tableware", "Knife", 755, 503, 900),
+    "133020": ("Tableware", "Spoon", 765, 477, 900),
 }
 
 
@@ -81,9 +88,7 @@ def main():
             t = crop.resize((300, 300)); ImageDraw.Draw(t).text((6, 6), f"{cat}/{name}", fill="yellow"); tiles.append(t)
             continue
         (OBJ / cat).mkdir(parents=True, exist_ok=True)
-        (OBJ / "originals").mkdir(exist_ok=True)
         crop.save(OBJ / cat / f"{name}.jpg", "JPEG", quality=85, optimize=True)
-        shutil.copyfile(files[key], OBJ / "originals" / f"{name}.jpg")
         columns[cat].append(f"{name}.jpg")
 
     if preview:
