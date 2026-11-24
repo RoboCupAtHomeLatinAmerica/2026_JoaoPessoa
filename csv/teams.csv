@@ -1,9 +1,9 @@
 Team Name,Captain,Institution,TDP,Poster,Robot Name,Robot Photo,Website,Video,Details
-BahiaRT,Gabrielle Carvalho,Universidade do Estado da Bahia - UNEB,,,BILL,Photos/robots/Bill.jpg,https://acso.uneb.br/bill/,https://youtu.be/YLivRGXMVr8,Details
-UnipDroidians,Caio Watari,Universidade Paulista,,,Rosie Jetson,Photos/robots/Rosie.jpg,https://www.unipdroidians.com,https://www.youtube.com/watch?v=-IOv1kArVSA,Details
-UTBots,Larissa Bialski de Lima,UTFPR,,,HESTIA,Photos/robots/HESTIA.jpeg,https://utfpr.curitiba.br/utbots-at-home/home/,https://youtu.be/U_B4reHFXQ0,Details
-FBOT,Marina Zanotta Rocha,Universidade Federal do Rio Grande - FURG,,,BORIS,Photos/robots/boris.png,https://fbotwork.vercel.app/Fbothome,https://youtu.be/Wta6LRws5k0,Details
-Warthog,Rhayna Christiani Vasconcelos Marques Casado,Universidade de São Paulo (USP),,,Antares,Photos/robots/antares.png,https://wr.sc.usp.br/,https://youtu.be/CVDv0-60MxE,Details
+BahiaRT,Gabrielle Carvalho,Universidade do Estado da Bahia - UNEB,TDPs/bahiart.pdf,Posters/bahiart.pdf,BILL,Photos/robots/Bill.jpg,https://acso.uneb.br/bill/,https://youtu.be/YLivRGXMVr8,Details
+UnipDroidians,Caio Watari,Universidade Paulista,TDPs/unipdroidians.pdf,Posters/unipdroidians.pdf,Rosie Jetson,Photos/robots/Rosie.jpg,https://www.unipdroidians.com,https://www.youtube.com/watch?v=-IOv1kArVSA,Details
+UTBots,Larissa Bialski de Lima,UTFPR,TDPs/utbots.pdf,Posters/utbots.pdf,HESTIA,Photos/robots/HESTIA.jpeg,https://utfpr.curitiba.br/utbots-at-home/home/,https://youtu.be/U_B4reHFXQ0,Details
+FBOT,Marina Zanotta Rocha,Universidade Federal do Rio Grande - FURG,TDPs/fbot.pdf,Posters/fbot.pdf,BORIS,Photos/robots/boris.png,https://fbotwork.vercel.app/Fbothome,https://youtu.be/Wta6LRws5k0,Details
+Warthog,Rhayna Christiani Vasconcelos Marques Casado,Universidade de São Paulo (USP),TDPs/warthog.pdf,Posters/warthog.pdf,Antares,Photos/robots/antares.png,https://wr.sc.usp.br/,https://youtu.be/CVDv0-60MxE,Details
 ATENA,Igor de Moura Fonseca,USP,,,REMY,Photos/robots/Remy.jpg,https://semear-remy.squarespace.com,https://www.youtube.com/watch?v=3LlnOSIbcgI&t=1s,Details
 Pequi Mecânico,José Rafael Rebêlo Teles,Universidade Federal de Goiás,,,Miss Piggy,Photos/robots/miss_piggy.jpeg,https://pequi-mecanico-home.github.io/,https://www.youtube.com/watch?v=goGLQpgr_3U,Details
 Robotecos,Matheus Ferlin,Robotec,,,"Zeca, Teminho",Photos/robots/Zeca_Teminho.jpg,https://www.robotecsolutions.com/,https://youtu.be/z4xsmRBajPw,Details
