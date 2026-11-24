@@ -55,6 +55,8 @@ OBJECTS = {
     "133008": ("Tableware", "Fork", 675, 477, 900),
     "133015": ("Tableware", "Knife", 755, 503, 900),
     "133020": ("Tableware", "Spoon", 765, 477, 900),
+    # foto de 24/11 (pastilha da máquina de lavar louça, item do Pick and Place)
+    "133048": ("Cleaning supplies", "Dishwasher tab", 536, 728, 450),
 }
 
 
