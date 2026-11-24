@@ -47,7 +47,7 @@ OBJECTS = {
     "094734": ("Fruits", "Lime", 571, 674, 500),
     "094815": ("Fruits", "Green apple", 537, 674, 500),
     # fotos de 23/11 (fotos do dia 23 em paisagem: 1440x1080; lado máximo do recorte = 1080)
-    "132602": ("Others", "Reusable bag", 540, 665, 1080),
+    "132602": ("Others", "Bag", 540, 665, 1080),
     "132802": ("Tableware", "Plate", 532, 755, 950),
     "132811": ("Tableware", "Bowl", 765, 512, 1000),
     "132843": ("Tableware", "Cup", 547, 623, 800),
