@@ -13,6 +13,7 @@ Site estático (GitHub Pages). Para ver localmente: `python3 -m http.server 8000
 | Equipes (nome, capitão, instituição, TDP, pôster, robô, foto, site, vídeo) | `csv/teams.csv` |
 | Hardware e software de cada robô (botão *Details* da aba Teams; chave = nome da equipe no CSV) | `data/team-details.json` |
 | Nomes de pessoas / objetos | `csv/people.csv`, `Photos/objects/index.csv` |
+| Cardápio da prova Restaurant (aba Tasks Info) | `Photos/menu/restaurant-menu.png`, gerado por `python3 tools/make_menu.py` |
 | Aba Arena: imagens e lista de ambientes | `data/event.json` → `arena.images` (`src`, `caption`, `alt`, `w`, `h`, `wide`, `description` opcional) e `arena.rooms`; arquivos em `Photos/arena/` |
 | Texto do CfP e demais seções | `index.html` |
 
